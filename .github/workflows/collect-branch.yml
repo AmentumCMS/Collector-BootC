@@ -35,11 +35,11 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y skopeo pigz
 
-      - name: DSO Login
+      - name: ${{ vars.REGISTRY }} Login
         run: |
-          skopeo login registry1.dso.mil \
-            -u ${{ secrets.REGISTRY_USER }} \
-            -p ${{ secrets.REGISTRY_TOKEN }}
+          skopeo login '${{ vars.REGISTRY }}' \
+            -u '${{ secrets.REDHAT_USER }}' \
+            -p '${{ secrets.REDHAT_PASS }}'
 
       - name: Run Skopeo Sync
         run: |
