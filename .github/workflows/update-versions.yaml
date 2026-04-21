@@ -38,6 +38,9 @@ jobs:
             if [[ "$REGISTRY" == "registry1.dso.mil" ]]; then
               echo "🔑 Logging into Iron Bank..."
               skopeo login "$REGISTRY" -u "$REGISTRY_USER" -p "$REGISTRY_TOKEN"
+            elif [[ "$REGISTRY" == "registry.redhat.io" ]]; then
+              echo "🔑 Logging into Red Hat..."
+              skopeo login "$REGISTRY" -u "$REDHAT_USER" -p "$REDHAT_PASS"
             else
               echo "🔓 Skipping login for $REGISTRY (Public/GHCR)"
             fi
