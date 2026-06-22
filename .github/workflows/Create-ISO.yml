@@ -1,4 +1,4 @@
-name: UBI-IB ISO Creation
+name: BootC ISO Creation
 on:
   release:
     types: [edited, released]
