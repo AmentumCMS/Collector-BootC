@@ -2,3 +2,9 @@ registry.redhat.io:
     images-by-tag-regex:
         rhel9/rhel-bootc: ^9.8$
         rhel9/bootc-image-builder: ^9.8$
+ghcr.io:
+    images-by-tag-regex:
+        osbuild/image-builder: latest$
+docker.io:
+    images-by-tag-regex:
+        vmware/vcsim: ^latest$
